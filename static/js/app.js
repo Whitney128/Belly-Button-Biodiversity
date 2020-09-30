@@ -1,7 +1,7 @@
 function buildMetadata(sample) {
 d3.json("../../data/samples.json").then((data) => {
   console.log(data);
-
+//demo info//
    var metadata = data.metadata;
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
@@ -12,7 +12,7 @@ d3.json("../../data/samples.json").then((data) => {
     });
   });
 }
-
+//Gauge//
 function buildGauge(sample) {
 d3.json("../../data/samples.json").then((data) => {
   console.log(data);
@@ -75,7 +75,7 @@ d3.json("../../data/samples.json").then((data) => {
     var otu_labels = data.otu_labels;
     var sample_values = data.sample_values;
 
-    // Build a Bubble Chart
+    // Bubble chart
     var bubbleLayout = {
       title: "Belly button bacteria bubble chart",
       margin: { t: 10},
@@ -98,7 +98,7 @@ d3.json("../../data/samples.json").then((data) => {
     ];
 
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
-
+//bar chart//
    var yticks = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
     var barData = [
       {
@@ -120,10 +120,9 @@ d3.json("../../data/samples.json").then((data) => {
 }
 
 function init() {
-  // Grab a reference to the dropdown select element
+  //dropdown menu//
   var selector = d3.select("#selDataset");
-  
-  // Use the list of sample names to populate the select options
+
 d3.json("../../data/samples.json").then((data) => {
   console.log(data);
     var sampleNames = data.names;
@@ -135,21 +134,18 @@ d3.json("../../data/samples.json").then((data) => {
         .property("value", sample);
     });
 
-    // Use the first sample from the list to build the initial plots
     var SecondSample = sampleNames[1];
     buildCharts(SecondSample);
     buildMetadata(SecondSample);
     buildGauge(SecondSample);
   });
 }
+//final solution//
 
 function optionChanged(FinalSample) {
-  // Fetch new data each time a new sample is selected
   buildCharts(FinalSample);
   buildMetadata(FinalSample);
   buildGauge(FinalSample);
 }
 
-
-// Initialize the dashboard
 init();
