@@ -1,5 +1,5 @@
 function buildMetadata(sample) {
-d3.json("samples.json").then((data) => {
+d3.json("../../samples.json").then((data) => {
   console.log(data);
 //demo info//
    var metadata = data.metadata;
@@ -14,7 +14,7 @@ d3.json("samples.json").then((data) => {
 }
 //Gauge//
 function buildGauge(sample) {
-d3.json("samples.json").then((data) => {
+d3.json("../../samples.json").then((data) => {
   console.log(data);
   var metadata = data.metadata;
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
