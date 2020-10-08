@@ -58,7 +58,7 @@ var layout = {
   font: { color: "darkblue", family: "Arial" }
 };
 
-Plotly.newPlot('myDiv', data, layout);
+Plotly.newPlot('gauge', data, layout);
 
 
  });
