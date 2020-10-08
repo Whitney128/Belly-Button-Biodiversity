@@ -1,5 +1,5 @@
 function buildMetadata(sample) {
-d3.json("../../Belly-Button-Biodiversity/data/samples.json").then((data) => {
+d3.json("../../data/samples.json").then((data) => {
   console.log(data);
 //demo info//
    var metadata = data.metadata;
