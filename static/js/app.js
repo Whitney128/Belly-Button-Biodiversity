@@ -14,7 +14,7 @@ d3.json("../../data/samples.json").then((data) => {
 }
 //Gauge//
 function buildGauge(sample) {
-d3.json("../../Belly-Button-Biodiversity/data/samples.json").then((data) => {
+d3.json("../../data/samples.json").then((data) => {
   console.log(data);
   var metadata = data.metadata;
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
@@ -65,7 +65,7 @@ Plotly.newPlot('gauge', data, layout);
 }
 
 function buildCharts(sample) {
-d3.json("../../Belly-Button-Biodiversity/data/samples.json").then((data) => {
+d3.json("../../data/samples.json").then((data) => {
   console.log(data);
     var samples = data.samples;
     var resultArray = samples.filter(sampleObj => sampleObj.id == sample);
@@ -123,7 +123,7 @@ function init() {
   //dropdown menu//
   var selector = d3.select("#selDataset");
 
-d3.json("../../Belly-Button-Biodiversity/data/samples.json").then((data) => {
+d3.json("../../data/samples.json").then((data) => {
   console.log(data);
     var sampleNames = data.names;
 
