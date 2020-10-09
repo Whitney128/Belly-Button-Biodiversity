@@ -148,4 +148,4 @@ function optionChanged(FinalSample) {
   buildGauge(FinalSample);
 }
 
-//init();
+init();
