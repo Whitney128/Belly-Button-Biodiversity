@@ -1,7 +1,8 @@
 function buildMetadata(sample) {
 d3.json("data/samples.json").then((data) => {
   console.log(data);
-//demo info//
+
+  //demo info//
    var metadata = data.metadata;
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
@@ -12,10 +13,12 @@ d3.json("data/samples.json").then((data) => {
     });
   });
 }
+
 //Gauge//
 function buildGauge(sample) {
 d3.json("data/samples.json").then((data) => {
   console.log(data);
+  
   var metadata = data.metadata;
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
@@ -24,7 +27,8 @@ d3.json("data/samples.json").then((data) => {
         var wfreq = value
       }
     }); 
-var data = [
+
+  var data = [
   {
     type: "indicator",
     mode: "gauge+number+delta",
@@ -83,7 +87,8 @@ d3.json("data/samples.json").then((data) => {
       xaxis: { title: "OTU ID" },
       margin: { t: 50}
     };
-    var bubbleData = [
+    
+  var bubbleData = [
       {
         x: otu_ids,
         y: sample_values,
@@ -98,7 +103,8 @@ d3.json("data/samples.json").then((data) => {
     ];
 
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
-//bar chart//
+
+  //bar chart//
    var yticks = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
     var barData = [
       {
