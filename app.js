@@ -12,57 +12,7 @@ d3.json("../../samples.json").then((data) => {
     });
   });
 }
-//Gauge//
-// function buildGauge(sample) {
-// d3.json("../../samples.json").then((data) => {
-//   console.log(data);
-//   var metadata = data.metadata;
-//     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
-//     var result = resultArray[0];
-//     Object.entries(result).forEach(([key, value]) => {
-//       if (key =="wfreq") {
-//         var wfreq = value
-//       }
-//     }); 
-// var data = [
-//   {
-//     type: "indicator",
-//     mode: "gauge+number+delta",
-//     value: 0,
-//     title: { text: "wfreq", font: { size: 24 } },
-//     delta: { reference: 9, increasing: { color: "RebeccaPurple" } },
-//     gauge: {
-//       axis: { range: [null, 9], tickwidth: 1, tickcolor: "darkblue" },
-//       bar: { color: "darkblue" },
-//       bgcolor: "white",
-//       borderwidth: 2,
-//       bordercolor: "gray",
-//       steps: [
-//         { range: [0, 5], color: "cyan" },
-//         { range: [5, 9], color: "royalblue" }
-//       ],
-//       threshold: {
-//         line: { color: "red", width: 4 },
-//         thickness: 0.75,
-//         value: 9
-//       }
-//     }
-//   }
-// ];
 
-// var layout = {
-//   width: 500,
-//   height: 400,
-//   margin: { t: 25, r: 25, l: 25, b: 25 },
-//   paper_bgcolor: "lavender",
-//   font: { color: "darkblue", family: "Arial" }
-// };
-
-// Plotly.newPlot('myDiv', data, layout);
-
-
-//  });
-// }
 
 function buildCharts(sample) {
 d3.json("../../data/samples.json").then((data) => {
@@ -137,7 +87,6 @@ d3.json("../../data/samples.json").then((data) => {
     var SecondSample = sampleNames[1];
     buildCharts(SecondSample);
     buildMetadata(SecondSample);
-    // buildGauge(SecondSample);
   });
 }
 //final solution//
@@ -145,7 +94,6 @@ d3.json("../../data/samples.json").then((data) => {
 function optionChanged(FinalSample) {
   buildCharts(FinalSample);
   buildMetadata(FinalSample);
-  // buildGauge(FinalSample);
 }
 
 init();
