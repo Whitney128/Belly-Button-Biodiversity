@@ -137,7 +137,7 @@ d3.json("../../data/samples.json").then((data) => {
     var SecondSample = sampleNames[1];
     buildCharts(SecondSample);
     buildMetadata(SecondSample);
-    buildGauge(SecondSample);
+    // buildGauge(SecondSample);
   });
 }
 //final solution//
@@ -145,7 +145,7 @@ d3.json("../../data/samples.json").then((data) => {
 function optionChanged(FinalSample) {
   buildCharts(FinalSample);
   buildMetadata(FinalSample);
-  buildGauge(FinalSample);
+  // buildGauge(FinalSample);
 }
 
 init();
