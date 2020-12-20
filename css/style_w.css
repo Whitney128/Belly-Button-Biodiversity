@@ -6,6 +6,14 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+   .jumbotron { 
+    background-color:blue;
+    color: white;
+    max-width: 3000px;
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+}
 /* Navbar */
 .navbar{
   max-height: 57px; 
