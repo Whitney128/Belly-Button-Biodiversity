@@ -59,3 +59,14 @@ Usability:
 You will be able to interact with the horizontal bar chart, or bubble chart to observe how much bacteria is on the subject. You can also click on the test subject id to change which subject is being examed. 
 
 webpage link- https://whitney128.github.io/Belly-Button-Biodiversity/
+
+![image](https://user-images.githubusercontent.com/66101341/101559681-df4d9c00-397e-11eb-91f3-1e08bcba0da2.png)
+
+![image](https://user-images.githubusercontent.com/66101341/101559712-ec6a8b00-397e-11eb-9d8b-3969ae7cfab1.png)
+
+![image](https://user-images.githubusercontent.com/66101341/101559740-fa201080-397e-11eb-9777-d8dc201d2dbc.png)
+
+![image](https://user-images.githubusercontent.com/66101341/101559763-07d59600-397f-11eb-88b7-34f3c37e2f39.png)
+
+![image](https://user-images.githubusercontent.com/66101341/101559797-1ae86600-397f-11eb-9e7d-ba32a49838ff.png)
+
